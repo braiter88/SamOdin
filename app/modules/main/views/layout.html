@@ -1,0 +1,13 @@
+<div data-ng-repeat="item in gallery">
+    <div data-ng-show="!$stateParams.imgIndex || $stateParams.imgIndex == $index">
+        <img data-ng-src="/images/[[ item.image.full ]]">
+    </div>
+</div>
+<div data-ng-repeat="item in gallery">
+    <div>
+        <a ui-sref="home({imgIndex: $index})">[[ $index ]]</a>
+    </div>
+</div>
+<div>
+    <a data-ui-sref="home({imgIndex: ''})">Back</a>
+</div>
